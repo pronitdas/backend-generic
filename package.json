@@ -1,0 +1,84 @@
+{
+    "name": "backend-generic",
+    "description": "entity management",
+    "version": "0.1.0",
+    "homepage": "http://realestate.pronit.in",
+    "main": "src",
+    "keywords": [
+        ""
+    ],
+    "author": {
+        "name": "pronit",
+        "email": "me@pronit.in"
+    },
+    "contributors": [],
+    "bugs": {},
+    "directories": {
+        "lib": "src",
+        "test": "test/",
+        "config": "config/"
+    },
+    "engines": {
+        "node": "> 8.0.0",
+        "yarn": ">= 0.18.0"
+    },
+    "scripts": {
+        "test": "NODE_ENV= yarn run mocha",
+        "eslint": "eslint src/. test/. --config .eslintrc.json",
+        "dev": "nodemon src/",
+        "dev-pm2": "pm2 start src/ --watch",
+        "dev-stop": "pm2 stop all",
+        "start": "NODE_ENV=staging node src/",
+        "monitor": "pm2 logs",
+        "mocha": "mocha test/ --recursive --exit"
+    },
+    "dependencies": {
+        "@feathersjs/authentication": "^2.1.15",
+        "@feathersjs/authentication-jwt": "^2.0.9",
+        "@feathersjs/authentication-local": "^1.2.9",
+        "@feathersjs/configuration": "^2.0.4",
+        "@feathersjs/errors": "^3.3.4",
+        "@feathersjs/express": "^1.2.7",
+        "@feathersjs/feathers": "^3.2.3",
+        "@feathersjs/socketio": "^3.2.7",
+        "aws-sdk": "^2.387.0",
+        "compression": "^1.7.3",
+        "cors": "^2.8.5",
+        "csvtojson": "^2.0.10",
+        "dauria": "^2.0.0",
+        "dot-object": "^1.7.1",
+        "feathers-authentication-hooks": "^0.3.1",
+        "feathers-authentication-jwt": "^0.3.2",
+        "feathers-authentication-management": "^2.0.1",
+        "feathers-blob": "^2.0.1",
+        "feathers-hooks-common": "^4.20.2",
+        "feathers-mailer": "^3.0.1",
+        "feathers-mongoose": "^7.0.0",
+        "feathers-permissions": "^0.2.1",
+        "feathers-populate-hook": "^0.5.2",
+        "fs-blob-store": "^5.2.1",
+        "helmet": "^3.15.0",
+        "htmling": "^0.0.8",
+        "json-2-csv": "^3.5.5",
+        "mercury": "^14.1.0",
+        "mongodb-core": "^3.1.9",
+        "mongoose": "^5.3.12",
+        "mongoose-history": "^0.8.0",
+        "mongoose-type-email": "^1.0.10",
+        "mongoose-unique-validator": "^2.0.2",
+        "nodemailer-smtp-transport": "^2.7.4",
+        "pm2": "^3.2.9",
+        "s3-blob-store": "^3.2.0",
+        "serve-favicon": "^2.5.0",
+        "sharp": "^0.22.0",
+        "winston": "^3.0.0",
+        "xls-to-json": "^0.5.2"
+    },
+    "devDependencies": {
+        "eslint": "^5.9.0",
+        "mocha": "^5.2.0",
+        "nodemon": "^1.18.7",
+        "request": "^2.88.0",
+        "request-promise": "^4.2.2"
+    }
+}

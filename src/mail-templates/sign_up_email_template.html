@@ -1,0 +1,84 @@
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+
+<body style="margin: 0;background: transperent;">
+  <table
+    style="margin: 0 auto;font-family: 'Open Sans', 'Arial', 'sans-serif'; font-size: 13px; color: #2c2c2c; background: #f7f7f7;"
+    width="600" cellspacing="0" cellpadding="0" align="center">
+    <tbody>
+      <tr>
+        <td style="background: #f4f4f4;padding: 0 60px;">
+          <table width="100%">
+            <tr>
+              <td style="padding: 27px 0; text-align: center">
+                <img src="http://pronit.in/static/ic_logo.png" alt="pronit.in">
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td
+          style="padding: 13px 0;background: url('http://pronit.in/static/images/ic_blue_BG.png') no-repeat left top;background-size: cover;">
+          <p
+            style="font-size: 26px;text-align: center;color: #2c2c2c;font-family: 'Open Sans', 'Arial';font-weight: 600;color: #000;">
+            Thank you for signing up!</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <table style="background: #fff;padding: 20px 60px;" width="600" cellspacing="0" cellpadding="0">
+            <tbody width="100%">
+              <tr>
+                <td style="font-size: 14px;padding-bottom: 26px;">
+                  Hi {{firstName}},
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size: 14px;line-height: 23px; padding-bottom: 28px;">
+                  {{content}}
+                </td>
+                <template is="dom-if" if="{{token_link}}">
+                  <a href="{{tokenLink}}"> Click Here to {{action}} </a>
+                </template>
+              </tr>
+              <tr>
+                <td style="font-size: 14px;line-height: 23px; padding-bottom: 25px;border-bottom: 1px solid #ccc;">
+
+                  Cheers,<br /> Support Team<br />
+                  <a href="mailto:support@pronit.in">support@pronit.in</a> <br />
+                  <a href="#" target="_blank" style="color: #36aeea">pronit.in</a><br />
+                </td>
+              </tr>
+              <tr>
+                <td style="line-height: 27px; padding: 17px 0 0;text-align: center;">
+                  <span style="font-weight: 600;font-size: 15px;">Let's add your entity
+                    details!</span><br />
+                  <span style="font-size: 13px;">You're receiving this email because you signed up at
+                    <a href="#" target="_blank" style="color: #2c2c2c;text-decoration: none;">
+                      pronit.in</a></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td
+          style="font-size: 14px;padding: 20px 25px;border-top: 1px solid #bcbcbc;text-align: center;background: #f4f4f4;color: #999;font-weight: 600;">
+          <span style="margin: 0 0 13px;display: block;">All rights reserved. ©
+            <script>
+              document.write(new Date().getFullYear())
+
+            </script> pronit.in | <a href="mailto:support@pronit.in"
+              style="color: #999;text-decoration: none;">support@pronit.in</a></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>

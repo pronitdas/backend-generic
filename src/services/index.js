@@ -1,0 +1,37 @@
+const property = require('./property/property.service.js');
+const emi = require('./emi/emi.service.js');
+const transaction = require('./transaction/transaction.service.js');
+const user = require('./user/user.service.js');
+const s3Upload = require('./s3upload/s3upload.service.js');
+const borrower = require('./borrower/borrower.service.js');
+const company = require('./company/company.service.js');
+const mailer = require('./mailer/mailer.service.js');
+const auth = require('./auth/auth.service.js');
+const custom = require('./custom/custom.service.js');
+const testimonial = require('./testimonial/testimonial.service.js');
+const inquiry = require('./inquiry/inquiry.service.js');
+const mailinglist = require('./mailinglist/mailinglist.service.js');
+const emailTemplate = require('./email-template/email-template.service.js');
+const staticPages = require('./static-pages/static-pages.service.js');
+const bulkUpload = require('./bulk-upload/bulk-upload.service.js');
+const fileUploadLog = require('./file-upload-log/file-upload-log.service.js');
+// eslint-disable-next-line no-unused-vars
+module.exports = function (app) {
+  app.configure(property);
+  app.configure(emi);
+  app.configure(transaction);
+  app.configure(user);
+  app.configure(s3Upload);
+  app.configure(borrower);
+  app.configure(company);
+  app.configure(mailer);
+  app.configure(auth);
+  app.configure(custom);
+  app.configure(testimonial);
+  app.configure(inquiry);
+  app.configure(mailinglist);
+  app.configure(emailTemplate);
+  app.configure(staticPages);
+  app.configure(bulkUpload);
+  app.configure(fileUploadLog);
+};
